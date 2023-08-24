@@ -25,18 +25,38 @@ const data = [
      }
     ];
   
-export default QuestionItem = ({id, title}) => (
-  <View style={styles.item}>
-    <Text style={[styles_general.appText, styles_general.textDark]}>{title}</Text>
+export default QuestionItem = ({id, title, page}) => (
+    <View style={styles.item}>
+        <Text style={[styles_general.appText, styles_general.textDark]}>{title}</Text>
 
-    <RadioButtonRN
-        box={false}
-        textStyle={[styles_general.textDark,styles_general.appText, styles.optionItem]}
-        activeColor='#FFD24C'
-        data={data}
-        selectedBtn={(e) => console.log(e.id, id)}
-        />
-  </View>
+        {(page=="SubmitQuiz") ? 
+
+            <RadioButtonRN
+                box={false}
+                textStyle={styles.optionItem}
+                activeColor='#FFD24C'
+                data={data}
+                selectedBtn={(e) => console.log(e.id, id)}
+                />
+
+            :
+            
+            <>
+            
+                <RadioButtonRN
+                    box={false}
+                    textStyle={styles.optionItem}
+                    activeColor='#FFD24C'
+                    initial={3}
+                    data={data}
+                    />
+                
+                <Text style={styles.correctAnswer}>
+                    Correct answer: Option 3
+                </Text>
+            </>
+        }
+    </View>
 );
 
 const styles = StyleSheet.create({
@@ -52,5 +72,16 @@ const styles = StyleSheet.create({
     },
     optionItem: {
         marginVertical: 5,
+        color: '#251749',
+        fontSize: 16,
+    },
+    correctAnswer: {
+        marginVertical: 10,
+        fontSize: 16,
+        paddingVertical: 5,
+        backgroundColor: '#FFD24C',
+        color: '#251749',
+        borderRadius: 10,
+        fontWeight: 'bold',
     },
   });

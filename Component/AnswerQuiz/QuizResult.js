@@ -2,6 +2,7 @@ import {
     ScrollView, 
     Text, 
     TextInput, 
+    TouchableOpacity, 
     View, 
   } from 'react-native';
 import styles_general from '../../Styles/styles_general';
@@ -59,14 +60,18 @@ export default function QuizResult({ navigation }) {
 
         <View style={styles_answer_quiz.bottomContainer}>
             <Button_primary_large title="Done" navigation={navigation} navigateTo="Home" />
-            <Text style={[
-                styles_general.button_link,
-                styles_general.textDark,
-                styles_general.appText,
-                styles_answer_quiz.centeredView,
-            ]}>
-                View my answers
-            </Text>
+
+            <TouchableOpacity
+            onPress={()=>{navigation.navigate("DisplayAnswers")}}>
+                <Text style={[
+                    styles_general.button_link,
+                    styles_general.textDark,
+                    styles_general.appText,
+                    styles_answer_quiz.centeredView,
+                ]}>
+                    View my answers
+                </Text>
+            </TouchableOpacity>
         </View>
       </View>
     );

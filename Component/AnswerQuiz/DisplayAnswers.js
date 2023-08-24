@@ -10,7 +10,7 @@ import Top from '../Home/Top';
 import QuestionItem from '../Customized/QuestionItem';
 
   
-export default function SubmitQuiz({ navigation }) {
+export default function DisplayAnswers({ navigation }) {
     return (
       <View 
         style={[styles_general.bg_light,
@@ -18,6 +18,14 @@ export default function SubmitQuiz({ navigation }) {
         >
         
         <Top title='Nica' navigation={navigation} />
+
+        <Text style={[
+            styles_general.button_link,
+            styles_general.textDark,
+        ]}
+        onPress={()=>{navigation.navigate("Home")}}>
+            Back
+        </Text>
 
         <ScrollView>
             <View style={styles_answer_quiz.middleContainer}>
@@ -32,14 +40,11 @@ export default function SubmitQuiz({ navigation }) {
             </View>
 
             
-            <QuestionItem id="1" title="Quiz 1" page="SubmitQuiz" />
-            <QuestionItem id="1" title="Quiz 1" page="SubmitQuiz" />
-            <QuestionItem id="1" title="Quiz 1" page="SubmitQuiz" />
-            <QuestionItem id="1" title="Quiz 1" page="SubmitQuiz" />
+            <QuestionItem id="1" title="Quiz 1" page="DisplayAnswers" />
+            <QuestionItem id="1" title="Quiz 1" page="DisplayAnswers" />
+            <QuestionItem id="1" title="Quiz 1" page="DisplayAnswers" />
+            <QuestionItem id="1" title="Quiz 1" page="DisplayAnswers" />
             
-            <View style={styles_answer_quiz.btnSubmit}>
-                <Button_primary_large title="Submit" navigation={navigation} navigateTo="QuizResult" />
-            </View>
         </ScrollView>
       </View>
     );
