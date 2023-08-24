@@ -38,7 +38,7 @@ export default function SubmitQuiz({ navigation }) {
             <QuestionItem id="1" title="Quiz 1" />
             
             <View style={styles_answer_quiz.btnSubmit}>
-                <Button_primary_large title="Submit" />
+                <Button_primary_large title="Submit" navigation={navigation} navigateTo="QuizResult" />
             </View>
         </ScrollView>
       </View>
