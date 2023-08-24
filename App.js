@@ -9,6 +9,7 @@ import ChangePassword from './Component/Home/ChangePassword';
 
 import JoinQuiz from './Component/AnswerQuiz/JoinQuiz';
 import StartQuiz from './Component/AnswerQuiz/StartQuiz';
+import SubmitQuiz from './Component/AnswerQuiz/SubmitQuiz';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="ChangePassword" component={ChangePassword} options={{ headerShown: false }} />
         <Stack.Screen name="JoinQuiz" component={JoinQuiz} options={{ headerShown: false }} />
         <Stack.Screen name="StartQuiz" component={StartQuiz} options={{ headerShown: false }} />
+        <Stack.Screen name="SubmitQuiz" component={SubmitQuiz} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

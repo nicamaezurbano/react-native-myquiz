@@ -36,6 +36,9 @@ const styles_answer_quiz = StyleSheet.create({
     paragraph: {
         marginVertical: 20,
     },
+    btnSubmit: {
+        marginVertical: 20,
+    },
 });
 
 export default styles_answer_quiz;

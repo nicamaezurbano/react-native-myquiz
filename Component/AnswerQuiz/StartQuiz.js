@@ -60,7 +60,7 @@ export default function StartQuiz({ navigation }) {
         </View>
 
         <View style={styles_answer_quiz.bottomContainer}>
-            <Button_primary_large title="Start" />
+            <Button_primary_large title="Start" navigation={navigation} navigateTo="SubmitQuiz" />
         </View>
       </View>
     );
