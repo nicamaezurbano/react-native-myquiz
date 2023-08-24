@@ -8,8 +8,9 @@ import { getWindowWidth } from '../../utils/Constants';
 
 const windowWidth = getWindowWidth();
   
-export default ButtonPrimarySmall = ({title}) => (
-  <TouchableOpacity style={styles.item}>
+export default ButtonPrimarySmall = ({title, navigation, navigateTo}) => (
+  <TouchableOpacity style={styles.item}
+  onPress={()=>{navigation.navigate(navigateTo)}}>
     <Text style={[styles.title, styles_general.textDark]}>{title}</Text>
   </TouchableOpacity>
 );

@@ -12,6 +12,7 @@ import StartQuiz from './Component/AnswerQuiz/StartQuiz';
 import SubmitQuiz from './Component/AnswerQuiz/SubmitQuiz';
 import QuizResult from './Component/AnswerQuiz/QuizResult';
 import DisplayAnswers from './Component/AnswerQuiz/DisplayAnswers';
+import CreateQuiz from './Component/ManageQuiz/CreateQuiz';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,7 @@ export default function App() {
         <Stack.Screen name="SubmitQuiz" component={SubmitQuiz} options={{ headerShown: false }} />
         <Stack.Screen name="QuizResult" component={QuizResult} options={{ headerShown: false }} />
         <Stack.Screen name="DisplayAnswers" component={DisplayAnswers} options={{ headerShown: false }} />
+        <Stack.Screen name="CreateQuiz" component={CreateQuiz} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

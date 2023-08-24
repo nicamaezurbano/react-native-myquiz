@@ -1,13 +1,14 @@
 import { 
     Text, 
-    View, 
+    TouchableOpacity, 
   } from 'react-native';
 import { StyleSheet } from 'react-native';
   
-export default ItemPrimary = ({title}) => (
-  <View style={styles.item}>
+export default ItemPrimary = ({title, navigation, navigateTo}) => (
+  <TouchableOpacity style={styles.item} 
+  onPress={()=>{navigation.navigate(navigateTo)}}>
     <Text style={styles.title}>{title}</Text>
-  </View>
+  </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({

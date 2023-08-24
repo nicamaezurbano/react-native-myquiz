@@ -80,7 +80,7 @@ export default function Home({ navigation }) {
                 <View style={[
                         styles_home.bottom_null
                         ]}>
-                    <Button_primary_large title="Create quiz" />
+                    <Button_primary_large title="Create quiz" navigation={navigation} navigateTo="CreateQuiz" />
                     <Button_secondary_large title="Join quiz" navigation={navigation} navigateTo="JoinQuiz" />
                 </View>
             </>
@@ -95,13 +95,13 @@ export default function Home({ navigation }) {
                         ]}>Manage MyQuiz</Text>
 
                 <ScrollView>
-                    {QuizList.map((item)=>(<ItemList_primary id={item.id} title={item.title} />))}
+                    {QuizList.map((item)=>(<ItemList_primary id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayAnswers" />))}
                 </ScrollView>
 
                 <View style={[
                         styles_home.bottom
                         ]}>
-                    <Button_primary_small title="Create quiz" />
+                    <Button_primary_small title="Create quiz" navigation={navigation} navigateTo="CreateQuiz" />
                     
                     <Button_secondary_small title="Join quiz" navigation={navigation} navigateTo="JoinQuiz" />
                 </View>
