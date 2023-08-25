@@ -27,9 +27,17 @@ const styles_modal = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
+    modalBody_settings: {
+        marginTop: 25,
+        alignItems: 'center',
+    },
     modalBody: {
         marginTop: 25,
         alignItems: 'center',
+        marginHorizontal: 20,
+    },
+    modalBody_modaltext2: {
+        marginTop: 15,
     },
     modalFooter: {
         marginHorizontal: 40,

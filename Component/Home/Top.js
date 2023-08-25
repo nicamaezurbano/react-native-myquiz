@@ -61,7 +61,7 @@ export default function Top({ title, navigation }) {
                     </TouchableOpacity>
                   </View>
                     
-                  <View style={styles_modal.modalBody}>
+                  <View style={styles_modal.modalBody_settings}>
                     <View style={styles_modal.settingsItemDivider}></View>
                     
                     <TouchableOpacity style={styles_modal.settingsItem}

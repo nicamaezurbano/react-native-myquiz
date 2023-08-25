@@ -30,6 +30,9 @@ const styles_general = StyleSheet.create({
     bg_light: {
         backgroundColor: '#F2F2F2',
     },
+    centeredView: {
+        textAlign: 'center',
+    },
 });
 
 export default styles_general;

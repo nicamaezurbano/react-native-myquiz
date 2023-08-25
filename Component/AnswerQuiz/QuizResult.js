@@ -25,7 +25,7 @@ export default function QuizResult({ navigation }) {
                 styles_general.appHeader, 
                 styles_general.textDark,
                 styles_general.textBold,
-                styles_answer_quiz.centeredView,
+                styles_general.centeredView,
                 ]}>
                 All about Computers
             </Text>
@@ -33,7 +33,7 @@ export default function QuizResult({ navigation }) {
                 <Text style={[
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                     styles_answer_quiz.paragraph,
                 ]}>
                     Quiz finished.
@@ -41,7 +41,7 @@ export default function QuizResult({ navigation }) {
                 <Text style={[
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                     styles_answer_quiz.paragraph,
                 ]}>
                     Thanks fo completing this quiz.
@@ -50,7 +50,7 @@ export default function QuizResult({ navigation }) {
                     styles_general.textDark,
                     styles_general.appText,
                     styles_general.textBold,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                     styles_answer_quiz.paragraph,
                 ]}>
                     Result: 2/3
@@ -67,7 +67,7 @@ export default function QuizResult({ navigation }) {
                     styles_general.button_link,
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                 ]}>
                     View my answers
                 </Text>

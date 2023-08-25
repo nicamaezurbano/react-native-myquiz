@@ -25,7 +25,7 @@ export default function SubmitQuiz({ navigation }) {
                     styles_general.appHeader, 
                     styles_general.textDark,
                     styles_general.textBold,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                     ]}>
                     All about Computers
                 </Text>

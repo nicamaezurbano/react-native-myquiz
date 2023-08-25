@@ -57,6 +57,15 @@ export default function Home({ navigation }) {
         >
         
         <Top title='Nica' navigation={navigation} />
+        
+        <Text style={[
+            styles_general.button_link,
+            styles_general.appText,
+            styles_general.textDark,
+            styles_home.btnManage,
+            ]}
+            onPress={()=>{navigation.navigate("DisplayQuizzes")}}
+            >Manage MyQuiz</Text>
 
         {(QuizList == undefined || QuizList == null) ?
                 
@@ -87,15 +96,8 @@ export default function Home({ navigation }) {
                 
             :
             <>
-                <Text style={[
-                        styles_general.button_link,
-                        styles_general.appText,
-                        styles_general.textDark,
-                        styles_home.btnManage,
-                        ]}>Manage MyQuiz</Text>
-
                 <ScrollView>
-                    {QuizList.map((item)=>(<ItemList_primary id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayAnswers" />))}
+                    {QuizList.map((item)=>(<ItemList_primary key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayAnswers" />))}
                 </ScrollView>
 
                 <View style={[

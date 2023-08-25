@@ -24,9 +24,6 @@ const styles_answer_quiz = StyleSheet.create({
         paddingVertical: 50,
         paddingHorizontal: 20,
     },
-    centeredView: {
-        textAlign: 'center',
-    },
     bottomContainer: {
         padding: 20,
     },

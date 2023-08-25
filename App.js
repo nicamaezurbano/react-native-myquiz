@@ -12,6 +12,7 @@ import StartQuiz from './Component/AnswerQuiz/StartQuiz';
 import SubmitQuiz from './Component/AnswerQuiz/SubmitQuiz';
 import QuizResult from './Component/AnswerQuiz/QuizResult';
 import DisplayAnswers from './Component/AnswerQuiz/DisplayAnswers';
+import DisplayQuizzes from './Component/ManageQuiz/DisplayQuizzes';
 import CreateQuiz from './Component/ManageQuiz/CreateQuiz';
 
 const Stack = createNativeStackNavigator();
@@ -25,11 +26,14 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="EditName" component={EditName} options={{ headerShown: false }} />
         <Stack.Screen name="ChangePassword" component={ChangePassword} options={{ headerShown: false }} />
+        
         <Stack.Screen name="JoinQuiz" component={JoinQuiz} options={{ headerShown: false }} />
         <Stack.Screen name="StartQuiz" component={StartQuiz} options={{ headerShown: false }} />
         <Stack.Screen name="SubmitQuiz" component={SubmitQuiz} options={{ headerShown: false }} />
         <Stack.Screen name="QuizResult" component={QuizResult} options={{ headerShown: false }} />
         <Stack.Screen name="DisplayAnswers" component={DisplayAnswers} options={{ headerShown: false }} />
+
+        <Stack.Screen name="DisplayQuizzes" component={DisplayQuizzes} options={{ headerShown: false }} />
         <Stack.Screen name="CreateQuiz" component={CreateQuiz} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>

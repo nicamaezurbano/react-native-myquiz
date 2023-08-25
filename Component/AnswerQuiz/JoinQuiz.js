@@ -24,7 +24,7 @@ export default function JoinQuiz({ navigation }) {
             <Text style={[
                 styles_general.appHeader, 
                 styles_general.textDark,
-                styles_answer_quiz.centeredView
+                styles_general.centeredView
                 ]}>
                 Please enter your
             </Text>
@@ -32,7 +32,7 @@ export default function JoinQuiz({ navigation }) {
                 styles_general.appHeader, 
                 styles_general.textDark,
                 styles_general.textBold,
-                styles_answer_quiz.centeredView
+                styles_general.centeredView
                 ]}>
                 Access Code
             </Text>
@@ -45,7 +45,7 @@ export default function JoinQuiz({ navigation }) {
             <Text style={[
                 styles_general.textDark,
                 styles_general.appText,
-                styles_answer_quiz.centeredView
+                styles_general.centeredView
             ]}>
                 Access code allows you to 
                 
@@ -53,7 +53,7 @@ export default function JoinQuiz({ navigation }) {
             <Text style={[
                 styles_general.textDark,
                 styles_general.appText,
-                styles_answer_quiz.centeredView
+                styles_general.centeredView
             ]}>participate a quiz.
             </Text>
         </View>
@@ -64,12 +64,12 @@ export default function JoinQuiz({ navigation }) {
             <Text style={[
                 styles_general.textDark,
                 styles_general.appText,
-                styles_answer_quiz.centeredView
+                styles_general.centeredView
             ]}>
                 or
             </Text>
 
-            <Button_secondary_large title="Create quiz" />
+            <Button_secondary_large title="Create quiz" navigation={navigation} navigateTo="CreateQuiz" />
         </View>
       </View>
     );

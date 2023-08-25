@@ -31,7 +31,23 @@ const styles_manage_quiz = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 5,
         paddingBottom: 15,
-    }
+    },
+    btnBack: {
+        alignSelf: 'flex-start',
+        marginVertical: 20,
+        marginLeft: 20,
+    },
+    displayQuizTopText: {
+        marginBottom: 20,
+    },
+    quizItemContainer:{
+        flexDirection: 'row',
+    },
+    removeIcon: {
+        position: 'absolute',
+        top: 5,
+        right: 15,
+    },
 });
 
 export default styles_manage_quiz;

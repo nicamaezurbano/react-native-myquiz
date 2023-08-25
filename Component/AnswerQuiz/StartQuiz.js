@@ -24,7 +24,7 @@ export default function StartQuiz({ navigation }) {
                 styles_general.appHeader, 
                 styles_general.textDark,
                 styles_general.textBold,
-                styles_answer_quiz.centeredView,
+                styles_general.centeredView,
                 ]}>
                 All about Computers
             </Text>
@@ -32,7 +32,7 @@ export default function StartQuiz({ navigation }) {
                 <Text style={[
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                     styles_answer_quiz.paragraph,
                 ]}>
                     You are about to take this quiz.
@@ -42,7 +42,7 @@ export default function StartQuiz({ navigation }) {
                 <Text style={[
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                     styles_answer_quiz.paragraph,
                 ]}>
                     There is no time limit so you
@@ -51,7 +51,7 @@ export default function StartQuiz({ navigation }) {
                 <Text style={[
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_answer_quiz.centeredView,
+                    styles_general.centeredView,
                     styles_answer_quiz.paragraph,
                 ]}>
                     Good luck!
