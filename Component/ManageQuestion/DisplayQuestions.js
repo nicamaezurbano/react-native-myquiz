@@ -5,6 +5,7 @@ import {
     TouchableOpacity,
     Image,
     Modal,
+    TextInput,
   } from 'react-native';
 import styles_general from '../../Styles/styles_general';
 import styles_manage_quiz from '../../Styles/styles_manage_quiz';
@@ -14,7 +15,7 @@ import Top from '../Home/Top';
 import styles_modal from '../../Styles/styles_modal';
 import React, {useState} from 'react';
 import Button_primary_large from '../Customized/Button_primary_large';
-import { TextInput } from 'react-native';
+import AddQuestionButton from '../Customized/Add_question_button';
 
 export default function DisplayQuestions({ navigation, route }) {
 
@@ -113,6 +114,8 @@ export default function DisplayQuestions({ navigation, route }) {
                 {QuestionList.map((item)=>(
                     <ManageQuestionItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayQuestions" />
                 ))}
+
+                <AddQuestionButton navigation={navigation} navigateTo="DisplayOption" />
             </ScrollView>
 
             <View style={[
