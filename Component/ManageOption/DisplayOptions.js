@@ -14,44 +14,30 @@ import ItemList_primary from '../Customized/ItemList_primary';
 import Top from '../Home/Top';
 import React, {useState} from 'react';
 import Button_primary_large from '../Customized/Button_primary_large';
-import AddQuestionButton from '../Customized/Add_question_button';
-import EditQuiz from '../ManageQuiz/EditQuiz';
-import RemoveQuestion from './RemoveQuestion';
+import EditQuestion from '../ManageQuestion/EditQuestion';
 
-export default function DisplayQuestions({ navigation, route }) {
+export default function DisplayOptions({ navigation, route }) {
 
-    const QuestionList = [
+    const OptionList = [
         {
             id: '1',
-            title: 'Question One',
+            title: 'Option One',
         },
         {
             id: '2',
-            title: 'Question Two',
+            title: 'Option Two',
         },
         {
             id: '3',
-            title: 'Question Three',
+            title: 'Option Three',
         },
         {
             id: '4',
-            title: 'Question Four',
+            title: 'Option Four',
         },
         {
             id: '5',
-            title: 'Question Five',
-        },
-        {
-            id: '6',
-            title: 'Question Six',
-        },
-        {
-            id: '7',
-            title: 'Question Seven',
-        },
-        {
-            id: '8',
-            title: 'Question Eight',
+            title: 'Option Five',
         },
     ];
 
@@ -69,7 +55,7 @@ export default function DisplayQuestions({ navigation, route }) {
                 styles_general.textDark,
                 styles_general.btnBack,
                 ]}
-                onPress={()=>{navigation.navigate("DisplayQuizzes")}}
+                onPress={()=>{navigation.navigate("DisplayQuestions")}}
                 >Back</Text>
                     
             <ScrollView>
@@ -81,35 +67,26 @@ export default function DisplayQuestions({ navigation, route }) {
                         styles_general.centeredView,
                         styles_manage_question.quizTitle
                         ]}>
-                        All about Computers
+                        Question 1
                     </Text>
 
-                    <EditQuiz id={route.params.id.id} />
+                    <EditQuestion id={route.params.id.id} />
 
                 </View>
 
-                <View style={[styles_manage_question.copyCode]}>
-                    <Text style={[
-                        styles_general.appText, 
-                        styles_general.textDark,
-                        styles_general.centeredView,
-                        ]}>
-                        Access Code:  <Text style={styles_general.textBold}>abc123</Text>
-                    </Text>
-                    <TouchableOpacity>
-                        <Image
-                            style={[styles_general.icon, styles_manage_question.copyIcon
-                            ]}
-                            source={require('../../Images/icon-copy.png')}
-                        /> 
-                    </TouchableOpacity>
-                </View>
+                <Text style={[
+                    styles_general.appText, 
+                    styles_general.textDark,
+                    styles_manage_question.textOption,
+                    ]}>
+                    Options:
+                </Text>
 
-                {QuestionList.map((item)=>(
-                    <ManageQuestionItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayOptions" />
-                ))}
+                {/* {QuestionList.map((item)=>(
+                    <ManageQuestionItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="" />
+                ))} */}
 
-                <AddQuestionButton navigation={navigation} navigateTo="DisplayOptions" />
+                {/* <AddQuestionButton navigation={navigation} navigateTo="DisplayOption" /> */}
             </ScrollView>
 
             <View style={[

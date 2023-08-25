@@ -43,6 +43,10 @@ const styles_manage_question = StyleSheet.create({
         justifyContent: 'center',
         marginHorizontal: 20,
     },
+
+    textOption: {
+        margin: 20,
+    },
 });
 
 export default styles_manage_question;

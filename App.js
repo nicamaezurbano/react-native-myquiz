@@ -17,6 +17,7 @@ import DisplayQuizzes from './Component/ManageQuiz/DisplayQuizzes';
 import CreateQuiz from './Component/ManageQuiz/CreateQuiz';
 
 import DisplayQuestions from './Component/ManageQuestion/DisplayQuestions';
+import DisplayOptions from './Component/ManageOption/DisplayOptions';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ export default function App() {
         <Stack.Screen name="CreateQuiz" component={CreateQuiz} options={{ headerShown: false }} />
 
         <Stack.Screen name="DisplayQuestions" component={DisplayQuestions} options={{ headerShown: false }} />
+        <Stack.Screen name="DisplayOptions" component={DisplayOptions} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

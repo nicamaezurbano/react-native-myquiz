@@ -66,7 +66,7 @@ export default function AddQuestionButton({navigation, navigateTo}){
                             styles_general.button_link,
                             styles_general.appText,
                         ]}
-                        onPress={()=>{navigation.navigate(navigateTo)}}
+                        onPress={()=>{navigation.navigate(navigateTo, {id: 1})}}
                         >DONE</Text>
                       </TouchableOpacity>
                   </View>
