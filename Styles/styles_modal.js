@@ -54,6 +54,14 @@ const styles_modal = StyleSheet.create({
         width: 220,
         backgroundColor: '#e7e7e7',
     },
+
+    modal_input: {
+        borderColor: '#212A3E',
+        borderBottomWidth: 1,
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+        width: 250-40,
+    },
 });
 
 export default styles_modal;

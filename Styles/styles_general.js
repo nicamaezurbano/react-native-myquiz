@@ -33,6 +33,16 @@ const styles_general = StyleSheet.create({
     centeredView: {
         textAlign: 'center',
     },
+    btnManage: {
+        alignSelf: 'flex-end',
+        marginVertical: 20,
+        marginRight: 20,
+    },
+    btnBack: {
+        alignSelf: 'flex-start',
+        marginVertical: 20,
+        marginLeft: 20,
+    },
 });
 
 export default styles_general;

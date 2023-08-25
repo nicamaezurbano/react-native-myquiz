@@ -25,7 +25,7 @@ export default function CreateQuiz({ navigation }) {
                 <Text style={[
                     styles_general.appHeader, 
                     styles_general.textDark,
-                    styles_manage_quiz.centeredView
+                    styles_general.centeredView
                     ]}>
                     Create your
                 </Text>
@@ -33,7 +33,7 @@ export default function CreateQuiz({ navigation }) {
                     styles_general.appHeader, 
                     styles_general.textDark,
                     styles_general.textBold,
-                    styles_manage_quiz.centeredView
+                    styles_general.centeredView
                     ]}>
                     Quiz
                 </Text>
@@ -46,7 +46,7 @@ export default function CreateQuiz({ navigation }) {
                 <Text style={[
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_manage_quiz.centeredView
+                    styles_general.centeredView
                 ]}>
                     Your title should be creative
                     
@@ -54,7 +54,7 @@ export default function CreateQuiz({ navigation }) {
                 <Text style={[
                     styles_general.textDark,
                     styles_general.appText,
-                    styles_manage_quiz.centeredView
+                    styles_general.centeredView
                 ]}>and interesting.
                 </Text>
             </View>

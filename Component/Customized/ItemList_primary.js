@@ -9,7 +9,7 @@ const windowWidth = getWindowWidth()
   
 export default ItemPrimary = ({ id, title, navigation, navigateTo}) => (
   <TouchableOpacity style={styles.item} 
-  onPress={()=>{navigation.navigate(navigateTo)}}>
+  onPress={()=>{navigation.navigate(navigateTo, {id: {id}})}}>
     <Text style={styles.title}>{title}</Text>
   </TouchableOpacity>
 );

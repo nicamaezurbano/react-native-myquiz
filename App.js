@@ -12,8 +12,11 @@ import StartQuiz from './Component/AnswerQuiz/StartQuiz';
 import SubmitQuiz from './Component/AnswerQuiz/SubmitQuiz';
 import QuizResult from './Component/AnswerQuiz/QuizResult';
 import DisplayAnswers from './Component/AnswerQuiz/DisplayAnswers';
+
 import DisplayQuizzes from './Component/ManageQuiz/DisplayQuizzes';
 import CreateQuiz from './Component/ManageQuiz/CreateQuiz';
+
+import DisplayQuestions from './Component/ManageQuestion/DisplayQuestions';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +38,8 @@ export default function App() {
 
         <Stack.Screen name="DisplayQuizzes" component={DisplayQuizzes} options={{ headerShown: false }} />
         <Stack.Screen name="CreateQuiz" component={CreateQuiz} options={{ headerShown: false }} />
+
+        <Stack.Screen name="DisplayQuestions" component={DisplayQuestions} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -24,18 +24,10 @@ const styles_manage_quiz = StyleSheet.create({
         paddingVertical: 50,
         paddingHorizontal: 20,
     },
-    centeredView: {
-        textAlign: 'center',
-    },
     bottomContainer: {
         paddingHorizontal: 20,
         paddingTop: 5,
         paddingBottom: 15,
-    },
-    btnBack: {
-        alignSelf: 'flex-start',
-        marginVertical: 20,
-        marginLeft: 20,
     },
     displayQuizTopText: {
         marginBottom: 20,

@@ -27,11 +27,6 @@ const styles_home = StyleSheet.create({
         width: 30,
         height: 30,
     },
-    btnManage: {
-        alignSelf: 'flex-end',
-        marginVertical: 20,
-        marginRight: 20,
-    },
 });
 
 export default styles_home;

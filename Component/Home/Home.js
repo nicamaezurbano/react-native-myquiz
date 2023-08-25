@@ -62,7 +62,7 @@ export default function Home({ navigation }) {
             styles_general.button_link,
             styles_general.appText,
             styles_general.textDark,
-            styles_home.btnManage,
+            styles_general.btnManage,
             ]}
             onPress={()=>{navigation.navigate("DisplayQuizzes")}}
             >Manage MyQuiz</Text>

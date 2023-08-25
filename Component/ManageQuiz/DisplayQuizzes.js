@@ -64,8 +64,10 @@ export default function DisplayQuizzes({ navigation }) {
                 styles_general.button_link,
                 styles_general.appText,
                 styles_general.textDark,
-                styles_manage_quiz.btnBack,
-                ]}>Back</Text>
+                styles_general.btnBack,
+                ]}
+                onPress={()=>{navigation.navigate("Home")}}
+                >Back</Text>
 
 
             <Text style={[
@@ -79,7 +81,7 @@ export default function DisplayQuizzes({ navigation }) {
                     
             <ScrollView>
                 {QuizList.map((item)=>(
-                    <ManageQuizItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayAnswers" />
+                    <ManageQuizItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayQuestions" />
                 ))}
             </ScrollView>
 
