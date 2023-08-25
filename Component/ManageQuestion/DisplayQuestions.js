@@ -12,10 +12,11 @@ import styles_manage_quiz from '../../Styles/styles_manage_quiz';
 import styles_manage_question from '../../Styles/styles_manage_question';
 import ItemList_primary from '../Customized/ItemList_primary';
 import Top from '../Home/Top';
-import styles_modal from '../../Styles/styles_modal';
 import React, {useState} from 'react';
 import Button_primary_large from '../Customized/Button_primary_large';
 import AddQuestionButton from '../Customized/Add_question_button';
+import EditQuiz from '../ManageQuiz/EditQuiz';
+import RemoveQuestion from './RemoveQuestion';
 
 export default function DisplayQuestions({ navigation, route }) {
 
@@ -53,9 +54,6 @@ export default function DisplayQuestions({ navigation, route }) {
             title: 'Question Eight',
         },
     ];
-    
-    const [modalEditQuizVisible, setModalEditQuizVisible] = useState(false);
-    const [selectedQuizID, setSelectedQuizID] = useState(route.params.id.id);
 
     return (
         <View 
@@ -70,7 +68,9 @@ export default function DisplayQuestions({ navigation, route }) {
                 styles_general.appText,
                 styles_general.textDark,
                 styles_general.btnBack,
-                ]}>Back</Text>
+                ]}
+                onPress={()=>{navigation.navigate("DisplayQuizzes")}}
+                >Back</Text>
                     
             <ScrollView>
                 <View style={styles_manage_question.quizTitleContainer}>
@@ -83,15 +83,9 @@ export default function DisplayQuestions({ navigation, route }) {
                         ]}>
                         All about Computers
                     </Text>
-                    <TouchableOpacity
-                        onPress={() => {setModalEditQuizVisible(true), console.log(selectedQuizID)}}>
-                        <Image
-                            style={[styles_general.icon,
-                                styles_manage_question.editQuizIcon,
-                            ]}
-                            source={require('../../Images/icon-edit.png')}
-                        /> 
-                    </TouchableOpacity>
+
+                    <EditQuiz id={route.params.id.id} />
+
                 </View>
 
                 <View style={[styles_manage_question.copyCode]}>
@@ -112,7 +106,7 @@ export default function DisplayQuestions({ navigation, route }) {
                 </View>
 
                 {QuestionList.map((item)=>(
-                    <ManageQuestionItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayQuestions" />
+                    <ManageQuestionItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="" />
                 ))}
 
                 <AddQuestionButton navigation={navigation} navigateTo="DisplayOption" />
@@ -123,138 +117,15 @@ export default function DisplayQuestions({ navigation, route }) {
                 ]}>
                 <Button_primary_large title="Done" navigation={navigation} navigateTo="DisplayQuizzes" />
             </View>
-
-
-            {/* Modal for editing quiz */}
-            <Modal
-                animationType="fade"
-                transparent={true}
-                visible={modalEditQuizVisible}
-                onRequestClose={() => {
-                    setModalEditQuizVisible(!modalEditQuizVisible);
-                }}
-                >
-                <View style={styles_modal.centeredView}>
-                    <View style={styles_modal.modalView}>
-                        <View style={styles_modal.modalTitle}>
-                            <Text style={[
-                            styles_general.textBold, 
-                            styles_general.textDark,
-                            styles_general.appText,
-                            ]}>Edit Quiz</Text>
-                            
-                            <TouchableOpacity
-                                onPress={() => setModalEditQuizVisible(!modalEditQuizVisible)}>
-                                <Image
-                                    style={styles_general.icon}
-                                    source={require('../../Images/icon-remove.png')}
-                                /> 
-                            </TouchableOpacity>
-                        </View>
-                            
-                        <View style={styles_modal.modalBody}>
-                            <TextInput 
-                                style={[
-                                    styles_general.appText,
-                                    styles_modal.modal_input,
-                                ]}
-                                placeholder="Edit here"
-                            />
-                        </View>
-
-                        <View style={styles_modal.modalFooter}>
-                            <TouchableOpacity style={styles_modal.settingsItem}>
-                            
-                            <Text style={[
-                                styles_general.textDark,
-                                styles_general.button_link,
-                                styles_general.appText,
-                            ]}>DONE</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-            </Modal>
         </View>
     );
 }
 
 function ManageQuestionItem({id, title, navigation, navigateTo}){
-    
-    const [modalRemoveQuestionVisible, setModalRemoveQuestionVisible] = useState(false);
-    const [selectedQuestion, setSelectedQuestion] = useState("");
-
     return(
         <View style={styles_manage_quiz.quizItemContainer}>
             <ItemList_primary id={id} title={title} navigation={navigation} navigateTo={navigateTo} />
-
-            <TouchableOpacity
-                onPress={() => {setSelectedQuestion(id); setModalRemoveQuestionVisible(true)}}>
-                <Image
-                    style={[styles_general.icon,
-                        styles_manage_quiz.removeIcon,
-                    ]}
-                    source={require('../../Images/icon-remove.png')}
-                /> 
-            </TouchableOpacity>
-
-            
-            {/* Modal for logout confirmation */}
-            <Modal
-                animationType="fade"
-                transparent={true}
-                visible={modalRemoveQuestionVisible}
-                onRequestClose={() => {
-                    setModalRemoveQuestionVisible(!modalRemoveQuestionVisible);
-                }}
-                >
-                <View style={styles_modal.centeredView}>
-                    <View style={styles_modal.modalView}>
-                        <View style={styles_modal.modalTitle}>
-                            <Text style={[
-                            styles_general.textBold, 
-                            styles_general.textDark,
-                            styles_general.appText,
-                            ]}>Remove Question</Text>
-                            
-                            <TouchableOpacity
-                                onPress={() => setModalRemoveQuestionVisible(!modalRemoveQuestionVisible)}>
-                                <Image
-                                    style={styles_general.icon}
-                                    source={require('../../Images/icon-remove.png')}
-                                /> 
-                            </TouchableOpacity>
-                        </View>
-                            
-                        <View style={styles_modal.modalBody}>
-                            <Text style={[
-                            styles_general.textDark,
-                            styles_general.appText,
-                            ]}>Are you sure you want to remove this question?</Text>
-                        </View>
-
-                        <View style={styles_modal.modalFooter}>
-                            <TouchableOpacity style={styles_modal.settingsItem}>
-                            
-                            <Text style={[
-                                styles_general.textDark,
-                                styles_general.button_link,
-                                styles_general.appText,
-                            ]}>Yes</Text>
-                            </TouchableOpacity>
-
-                            <TouchableOpacity style={styles_modal.settingsItem}
-                            onPress={() => setModalRemoveQuestionVisible(!modalRemoveQuestionVisible)}>
-                            <Text style={[
-                                styles_general.textDark,
-                                styles_general.button_link,
-                                styles_general.appText,
-                            ]}>No</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-            </Modal>
+            <RemoveQuestion id={id} />
         </View>
     );
 }
