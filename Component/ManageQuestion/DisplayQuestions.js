@@ -14,7 +14,7 @@ import ItemList_primary from '../Customized/ItemList_primary';
 import Top from '../Home/Top';
 import React, {useState} from 'react';
 import Button_primary_large from '../Customized/Button_primary_large';
-import AddQuestionButton from '../Customized/Add_question_button';
+import AddQuestion from './AddQuestion';
 import EditQuiz from '../ManageQuiz/EditQuiz';
 import RemoveQuestion from './RemoveQuestion';
 
@@ -55,6 +55,8 @@ export default function DisplayQuestions({ navigation, route }) {
         },
     ];
 
+    const [selectedQuizID, setSelectedQuizID] = useState(route.params.id.id);
+
     return (
         <View 
             style={[styles_general.bg_light,
@@ -84,7 +86,7 @@ export default function DisplayQuestions({ navigation, route }) {
                         All about Computers
                     </Text>
 
-                    <EditQuiz id={route.params.id.id} />
+                    <EditQuiz id={selectedQuizID} />
 
                 </View>
 
@@ -109,7 +111,7 @@ export default function DisplayQuestions({ navigation, route }) {
                     <ManageQuestionItem key={item.id} id={item.id} title={item.title} navigation={navigation} navigateTo="DisplayOptions" />
                 ))}
 
-                <AddQuestionButton navigation={navigation} navigateTo="DisplayOptions" />
+                <AddQuestion navigation={navigation} navigateTo="DisplayOptions" />
             </ScrollView>
 
             <View style={[

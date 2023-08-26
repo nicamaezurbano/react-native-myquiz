@@ -11,7 +11,7 @@ import styles_general from '../../Styles/styles_general';
 import styles_modal from '../../Styles/styles_modal';
 import React, {useState} from 'react';
   
-export default function AddQuestionButton({navigation, navigateTo}){
+export default function AddQuestion({navigation, navigateTo}){
 
   const [modalAddQuestionVisible, setModalAddQuestionVisible] = useState(false);
 
@@ -66,7 +66,7 @@ export default function AddQuestionButton({navigation, navigateTo}){
                             styles_general.button_link,
                             styles_general.appText,
                         ]}
-                        onPress={()=>{navigation.navigate(navigateTo, {id: 1})}}
+                        onPress={()=>{setModalAddQuestionVisible(!modalAddQuestionVisible); navigation.navigate(navigateTo, {id: "1"})}}
                         >DONE</Text>
                       </TouchableOpacity>
                   </View>
